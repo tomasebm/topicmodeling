@@ -9,7 +9,7 @@ Lo primero que vamos a hacer es traer los links de la base de datos [GDELT](http
 
 ### Paso 2 - Preprocesamiento y modelización
 
-Podés encontrar en [éste notebook de Jupyter](https://github.com/tomasebm/topicmodeling/blob/main/notebook.ipynb) el preprocesamiento y la modelización. Las stopwords [están acá](https://github.com/tomasebm/topicmodeling/blob/main/stopwords.txt)
+Podés encontrar en [éste notebook de Jupyter](https://github.com/tomasebm/topicmodeling/blob/main/notebook.ipynb) el preprocesamiento y la modelización. Las stopwords [están acá](https://github.com/tomasebm/topicmodeling/blob/main/stopwords.txt).
 
 ### Paso 3 - Visualizaciones
 
