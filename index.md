@@ -1,3 +1,5 @@
+[![GitHub followers](https://img.shields.io/github/followers/tomasebm?style=social)](https://github.com/tomasebm/)
+
 # ¡Hola!
 
 En este repositorio se encuentra todo lo necesario para replicar [ésta tesis de grado.](https://github.com/tomasebm/topicmodeling/edit/gh-pages/index.md) Me podés contactar en **tomasmaguire@gmail.com** por cualquier consulta.
@@ -14,3 +16,5 @@ Podés encontrar en [éste notebook de Jupyter](https://github.com/tomasebm/topi
 ### Paso 3 - Visualizaciones
 
 Finalmente, las visualizaciones las podés hacer con este [éste código en R](https://github.com/tomasebm/topicmodeling/blob/main/VizTopic_TOM.R).
+
+
