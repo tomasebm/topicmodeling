@@ -5,7 +5,7 @@ library(tm)
 library(plotly)
 
 
-data <- read.csv('C:/Users/tmaguire/Desktop/tesis/final_viz_bigramas.csv',encoding = "UTF-8")
+data <- read.csv('C:/Users/XXXXXXXXXXXXXXXXX/final_viz_bigramas.csv',encoding = "UTF-8")
 data <- data %>% drop_na
 
 
@@ -14,28 +14,28 @@ data$Topic_11<-rowSums(data[,colnms])
 colnms2=c("Topic_2", "Topic_6", "Topic_8")
 
 data <- data %>% rename (
-  '01_Cine, arte y espect醕ulos'=Topic_1,
+  '01_Cine, arte y espect谩culos'=Topic_1,
   #'02_Hechos violentos'=Topic_2,
-  '02_Pol韙ica exterior'=Topic_3,
-  '03_Far醤dula'=Topic_4,
-  '04_Causas judiciales y hechos de corrupci髇'=Topic_5,
+  '02_Pol铆tica exterior'=Topic_3,
+  '03_Far谩ndula'=Topic_4,
+  '04_Causas judiciales y hechos de corrupci贸n'=Topic_5,
   #'06_Hechos de inseguridad'=Topic_6,
   '05_Deportes'=Topic_7,
-  #'08_T髉ico no interpretable'=Topic_8,
+  #'08_T贸pico no interpretable'=Topic_8,
   '06_Elecciones'=Topic_9,
-  '07_Econom韆'=Topic_10,
+  '07_Econom铆a'=Topic_10,
   '08_Hechos violentos/Inseguridad'=Topic_11)
 
 
 data <- data%>%select(-colnms2)
 
-###T覲ICOS POR D虯
+###T脫PICOS POR D脥A
 topic_proportion_per_date <- aggregate(data,by=list(dias=data$DATE),mean)
 topic_proportion_per_date<-topic_proportion_per_date %>% select(-DocumentIdentifier,-titulo, -texto, -Medio, -title_text, -title_text_ed,-V2Themes)
 topic_proportion_per_date$dias<-as.Date(topic_proportion_per_date$dias, format="%Y-%m-%d")
 
 g1b<-topic_proportion_per_date %>% 
-  pivot_longer(cols=c("01_Cine, arte y espect醕ulos":"08_Hechos violentos/Inseguridad"),names_to = c("Topics")) %>%
+  pivot_longer(cols=c("01_Cine, arte y espect谩culos":"08_Hechos violentos/Inseguridad"),names_to = c("Topics")) %>%
   ggplot(aes(x=dias, y=value, colour=Topics)) +
   geom_smooth(size=1.2) +
   theme_classic() +
@@ -47,17 +47,17 @@ g1b<-topic_proportion_per_date %>%
   geom_text(aes(x=topic_proportion_per_date$dias[278], label="\nSegunda vuelta", y=0.08), colour="black", angle=90)+
   theme(axis.text.x = element_text(angle = 90, hjust = 1))+
   scale_color_brewer(palette="Set1") +
-  labs(title='Evoluci髇 de los t髉icos',subtitle='Media de la composici髇 de los t髉icos de noticias')
+  labs(title='Evoluci贸n de los t贸picos',subtitle='Media de la composici贸n de los t贸picos de noticias')
 
 g1b
-###T覲ICOS POR DIARIO SEG贜 D虯
+###T脫PICOS POR DIARIO SEG脷N D脥A
 
 topic_proportion_per_nwsp <- data %>% group_by(Medio, DATE) %>% summarise_each(funs(mean))
 topic_proportion_per_nwsp <- topic_proportion_per_nwsp%>%select(-DocumentIdentifier,-titulo, -texto,-title_text, -title_text_ed, -V2Themes)
 topic_proportion_per_nwsp$DATE<-as.Date(topic_proportion_per_nwsp$DATE, format="%Y-%m-%d")
 
 g4<-topic_proportion_per_nwsp %>% 
-  pivot_longer(cols=c("01_Cine, arte y espect醕ulos":"08_Hechos violentos/Inseguridad"),names_to = c("Topics")) %>%
+  pivot_longer(cols=c("01_Cine, arte y espect谩culos":"08_Hechos violentos/Inseguridad"),names_to = c("Topics")) %>%
   ggplot(aes(x=DATE, y=value, color=Topics)) +
   geom_smooth() +
   facet_wrap(~Topics) +
@@ -67,11 +67,11 @@ g4<-topic_proportion_per_nwsp %>%
   geom_text(aes(x=topic_proportion_per_nwsp$DATE[253], label="\nGenerales", y=0.12), colour="black", angle=90)+
   theme_classic() +
   theme(legend.position = 'none')+
-  labs(title='Evoluci髇 de los t髉icos (media de la composici髇 de las noticias)')
+  labs(title='Evoluci贸n de los t贸picos (media de la composici贸n de las noticias)')
 
 g4
 g5<-topic_proportion_per_nwsp %>% 
-  pivot_longer(cols=c("01_Cine, arte y espect醕ulos":"08_Hechos violentos/Inseguridad"),names_to = c("Topics")) %>%
+  pivot_longer(cols=c("01_Cine, arte y espect谩culos":"08_Hechos violentos/Inseguridad"),names_to = c("Topics")) %>%
   ggplot(aes(x=DATE, y=value, colour=Topics)) +
   geom_smooth() +
   geom_vline(xintercept=as.numeric(topic_proportion_per_nwsp$DATE[173]), linetype=1, colour='red') +
@@ -84,7 +84,7 @@ g5<-topic_proportion_per_nwsp %>%
   facet_wrap(~Medio,nrow=7) +
   scale_color_brewer(palette="Set1") +
   theme_classic() +
-  labs(title='Evoluci髇 de los t髉icos seg鷑 diario')
+  labs(title='Evoluci贸n de los t贸picos seg煤n diario')
 
 g5
 
@@ -93,10 +93,10 @@ g5
 topic_proportion_per_nwsp2 <- data %>% group_by(Medio, DATE) %>% summarise_each(funs(mean))
 topic_proportion_per_nwsp2 <- topic_proportion_per_nwsp2%>%select(-DocumentIdentifier,-titulo, -texto,-title_text, -title_text_ed, -V2Themes)
 topic_proportion_per_nwsp2$DATE<-as.Date(topic_proportion_per_nwsp2$DATE, format="%Y-%m-%d")
-topic_proportion_per_nwsp2 <- filter(topic_proportion_per_nwsp2, Medio == "P醙ina 12")
+topic_proportion_per_nwsp2 <- filter(topic_proportion_per_nwsp2, Medio == "P谩gina 12")
 
 g6<-topic_proportion_per_nwsp2 %>% 
-  pivot_longer(cols=c("01_Cine, arte y espect醕ulos":"08_Hechos violentos/Inseguridad"),names_to = c("Topics")) %>%
+  pivot_longer(cols=c("01_Cine, arte y espect谩culos":"08_Hechos violentos/Inseguridad"),names_to = c("Topics")) %>%
   ggplot(aes(x=DATE, y=value, colour=Topics)) +
   geom_smooth(size=1.2) +
   geom_vline(xintercept=as.numeric(topic_proportion_per_nwsp2$DATE[174]), linetype=1, colour='red') +
@@ -107,12 +107,12 @@ g6<-topic_proportion_per_nwsp2 %>%
   facet_wrap(~Medio,nrow=2) +
   scale_color_brewer(palette="Set1") +
   theme_classic() +
-  labs(title='Evoluci髇 de los t髉icos seg鷑 diario')
+  labs(title='Evoluci贸n de los t贸picos seg煤n diario')
 
 g6
 
 
-## Composici髇 de t髉icos seg鷑 medios, 2015-2017. Media de la composici髇 de las noticias
+## Composici贸n de t贸picos seg煤n medios, 2015-2017. Media de la composici贸n de las noticias
 
 autores <- data %>% 
   group_by(Medio) %>%
@@ -124,7 +124,7 @@ aggregate(data,
           by = list(medios = data$Medio), 
           mean) %>%
   filter(medios %in% autores$Medio) %>%
-  gather(topic, value,`01_Cine, arte y espect醕ulos`:`08_Hechos violentos/Inseguridad`) %>%
+  gather(topic, value,`01_Cine, arte y espect谩culos`:`08_Hechos violentos/Inseguridad`) %>%
   ggplot(aes(x=medios, y=value, fill=topic)) + 
   geom_bar(stat = "identity") + ylab("value") +
   geom_text(aes(label = round(value,2)), 
