@@ -1,6 +1,6 @@
 # ¡Hola!
 
-En este repositorio se encuentra todo lo necesario para replicar [ésta tesis de grado.](https://github.com/tomasebm/topicmodeling/edit/gh-pages/index.md) Me podés contactar en **tomasmaguire@gmail.com**
+En este repositorio se encuentra todo lo necesario para replicar [ésta tesis de grado.](https://github.com/tomasebm/topicmodeling/edit/gh-pages/index.md) Me podés contactar en **tomasmaguire@gmail.com** por cualquier consulta.
 
 
 ### Paso 1 - Consulta a la base de datos GDELT
