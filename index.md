@@ -1,4 +1,4 @@
-[![GitHub followers](https://img.shields.io/github/followers/tomasebm?style=social)](https://github.com/tomasebm/)
+[![GitHub followers](https://img.shields.io/github/followers/tomasebm?style=social)](https://github.com/tomasebm/) ![GitHub language count](https://github.com/tomasebm/topicmodeling)
 
 # ¡Hola!
 
