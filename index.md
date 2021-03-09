@@ -1,6 +1,6 @@
 # ¡Hola!
 
-En este repositorio se encuentra todo lo necesario para replicar [ésta tesis de grado.](https://github.com/tomasebm/topicmodeling/edit/gh-pages/index.md) Me podés contactar [acá](tomasmaguire@gmail.com) si encontrás algún problema al querer replicarla.
+En este repositorio se encuentra todo lo necesario para replicar [ésta tesis de grado.](https://github.com/tomasebm/topicmodeling/edit/gh-pages/index.md) Me podés contactar [Dr. Ken Lunde](mailto:lunde@adobe.com?subject=[GitHub]%20Source%20Han%20Sans) si encontrás algún problema al querer replicarla.
 
 
 ### Paso 1 - Consulta a la base de datos GDELT
@@ -13,4 +13,4 @@ Podés encontrar en [éste notebook de Jupyter](https://github.com/tomasebm/topi
 
 ### Paso 3 - Visualizaciones
 
-Finalmente, las visualizaciones las podés hacer con este [éste código en R](https://github.com/tomasebm/topicmodeling/blob/main/VizTopic_TOM.R)
+Finalmente, las visualizaciones las podés hacer con este [éste código en R](https://github.com/tomasebm/topicmodeling/blob/main/VizTopic_TOM.R).
