@@ -5,9 +5,9 @@ Created on Sat Jan  2 06:50:53 2021
 @author: Tom
 """
 
-#############################################
-# No te olvides de instalar los paquetes =) ##
-#############################################
+#############################
+# importamos los paquetes ##
+#############################
 import pandas as pd
 from google.cloud import bigquery
 import os
