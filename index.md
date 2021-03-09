@@ -1,6 +1,7 @@
 [![GitHub followers](https://img.shields.io/github/followers/tomasebm?style=social)](https://github.com/tomasebm/) 
 [![GitHub language count](https://img.shields.io/github/languages/count/tomasebm/topicmodeling)](https://github.com/tomasebm/topicmodeling/) 
 [![Twitter Follow](https://img.shields.io/twitter/follow/tomasebm?style=social)](https://twitter.com/tomasebm)
+[![GitHub repo size](https://img.shields.io/github/repo-size/tomasebm/topicmodeling)](https://github.com/tomasebm/topicmodeling/) 
 
 # ¡Hola!
 
