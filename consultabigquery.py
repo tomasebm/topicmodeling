@@ -42,7 +42,6 @@ consulta = """
         DATE>=""" + str(DATEfloor) + """000000 and _PARTITIONTIME >= TIMESTAMP("""+ '"' + str(TIMESTAMPfloor)+ '"' """) 
     AND DATE<=""" + str(DATEtop) + """999999 and _PARTITIONTIME <= TIMESTAMP("""+ '"' + str(TIMESTAMPtop)+ '"' """) 
     AND (DocumentIdentifier like '%perfil.com%' OR DocumentIdentifier like '%lanacion.com.ar%' OR DocumentIdentifier like '%clarin.com%' OR DocumentIdentifier like '%minutouno.com%' OR DocumentIdentifier like '%pagina12.com.ar%' OR DocumentIdentifier like '%telam.com.ar%')
-    AND V2Themes like '%CORONA%'
     ORDER BY DATE DESC"""
 
 query_job = client.query(consulta)
