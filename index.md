@@ -3,7 +3,7 @@
 
 # ¡Hola!
 
-En este repositorio se encuentra todo lo necesario para replicar [esta tesis de grado.](https://drive.google.com/file/d/1XWX_RyfXLlFXccpJ71k8kkHtNFsVY7cP/view?usp=sharing) Me podés contactar en **tomasmaguire@gmail.com** por cualquier consulta.
+En este repositorio se encuentra todo lo necesario para replicar [esta tesis de grado.](https://drive.google.com/file/d/1WCtX9UaLi21UN-yqkNNtShOcmj_tqdNm/view?usp=sharing) Me podés contactar en **tomasmaguire@gmail.com** por cualquier consulta.
 
 
 ### Paso 1 - Consulta a la base de datos GDELT
